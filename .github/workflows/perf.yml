@@ -12,7 +12,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - command: perf-db-order-place
+          - command: perf-db-order-single
+          - command: perf-db-order-dual
+          - command: perf-db-order-ten
 
     steps:
           
