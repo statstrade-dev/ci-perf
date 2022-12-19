@@ -25,11 +25,11 @@ jobs:
           - command: perf-db-stake-ten
             total: 30000
           - command: perf-web-order-single
-            total: 20000
-          - command: perf-web-order-dual
-            total: 20000
-          - command: perf-web-order-ten
             total: 10000
+          - command: perf-web-order-dual
+            total: 10000
+          - command: perf-web-order-ten
+            total: 5000
 
     steps:
           
