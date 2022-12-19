@@ -26,6 +26,10 @@ jobs:
             total: 30000
           - command: perf-web-order-single
             total: 100000
+          - command: perf-web-order-dual
+            total: 100000
+          - command: perf-web-order-ten
+            total: 30000
 
     steps:
           
