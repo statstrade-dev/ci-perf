@@ -24,6 +24,8 @@ jobs:
             total: 100000
           - command: perf-db-stake-ten
             total: 30000
+          - command: perf-web-order-single
+            total: 100000
 
     steps:
           
