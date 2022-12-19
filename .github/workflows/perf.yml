@@ -13,8 +13,11 @@ jobs:
       matrix:
         include:
           - command: perf-db-order-single
+            total: 100000
           - command: perf-db-order-dual
+            total: 100000
           - command: perf-db-order-ten
+            total: 30000
 
     steps:
           
@@ -38,6 +41,10 @@ jobs:
         
       - name: Run Performance
         run: >
-          docker run --rm --network host -v $(pwd):$(pwd) -w $(pwd) 
+          docker run --rm --network host 
+          -v $(pwd):$(pwd) 
+          -w $(pwd)
+          -e BENCH_BATCH=1000
+          -e BENCH_TOTAL=${{ matrix.total }}
           ghcr.io/zcaudate/foundation-ci:main 
           bash -c 'cd statstrade-core && lein ${{ matrix.command }}'
